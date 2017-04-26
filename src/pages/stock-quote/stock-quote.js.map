@@ -1,0 +1,1 @@
+{"version":3,"file":"stock-quote.js","sourceRoot":"","sources":["stock-quote.ts"],"names":[],"mappings":";;;;;;;;;OAAO,EAAE,SAAS,EAAE,MAAM,eAAe;OAClC,EAAE,aAAa,EAAE,MAAM,eAAe;AAM7C;IAEE,wBAAmB,OAAsB;QAAtB,YAAO,GAAP,OAAO,CAAe;IAEzC,CAAC;IARH;QAAC,SAAS,CAAC;YACT,QAAQ,EAAE,WAAW;YACrB,WAAW,EAAE,WAAW;SACzB,CAAC;;sBAAA;IAOF,qBAAC;AAAD,CAAC,AAND,IAMC"}
