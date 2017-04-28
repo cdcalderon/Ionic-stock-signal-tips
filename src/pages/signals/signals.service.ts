@@ -1,4 +1,4 @@
-import { Http, Response } from '@angular/http';
+import { Http, Response, URLSearchParams } from '@angular/http';
 import {Signal} from "../../abstract/signal";
 import {Injectable} from "@angular/core";
 import 'rxjs';
@@ -13,29 +13,17 @@ export class SignalsService {
 
   constructor(private http: Http){}
 
-  getSignals(): Observable<Signal[]>{
+  getSignals(from: string, to: string, symbol: string): Observable<Signal[]>{
+    let params = new URLSearchParams();
+    params.set('to', to);
+    params.set('from', from);
+    params.set('symbol', symbol);
 
-    return this.http.get(`${this.signalsUrl}`)
+    return this.http.get(`${this.signalsUrl}`,  { search: params })
       .map((response: Response) => {
         this.signals = response.json();
         return this.signals;
       });
-    // return [
-    //   {
-    //     id: 'aapl',
-    //     date: '04/07/2017',
-    //     type: '3-Arrow'
-    //   },
-    //   {
-    //     id: 'msft',
-    //     date: '05/07/2016',
-    //     type: 'Gap'
-    //   },
-    //   {
-    //     id: 'ibm',
-    //     date: '02/07/2017',
-    //     type: '3-Arrow'
-    //   }
-    // ]
+
   }
 }

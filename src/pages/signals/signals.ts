@@ -19,7 +19,7 @@ export class SignalsPage implements  OnInit{
   }
 
   activate(): void {
-    this._signalsService.getSignals()
+    this._signalsService.getSignals('01/01/2016', '04/01/2017', 'aapl')
       .subscribe(signals => this.signals = signals,
        error => this.errorMessage = <any>error);
    // this.signals = this._signalsService.getSignals();

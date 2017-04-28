@@ -1,6 +1,16 @@
 export interface Signal {
-  id: string,
+  id: number,
   date: string,
-  type: string,
-
+  time: number,
+  typeName: string,
+  typeId: number,
+  open: number,
+  close: number,
+  high: number,
+  low: number,
+  histogram: number,
+  stochasticsK: number,
+  stochasticsD: number,
+  SMA10: number,
 }
+
